@@ -823,3 +823,9 @@ transition-timing-function: linear;
 }
 ```
 
+
+
+## 粘性布局
+
+- position:sticky
+  - 当滑动滚动条时，他的top，left等距离就是距离窗口的距离

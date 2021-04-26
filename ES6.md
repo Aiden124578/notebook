@@ -35,11 +35,31 @@ js后面可以不加分号
 
 ## let声明变量
 
-- var 可以声明多次，var可以重复声明，无法限制修改，没有块级作用域
-- let 只能声明一次
+- var 可以声明多次，var可以重复声明，无法限制修改，没有块级作用域，有局部作用域（函数作用域）和全局作用域
+- var只有在function（函数）中有块级作用域，在if、for中没有块级作用域
+- 全局变量：只有浏览器关闭的时候才会销毁，比较占内存资源
+- 局部变量：当我们程序执行完毕就会销毁
+
+```javascript
+function fn() {
+   //var a
+    if (true) {
+        console.log(a + ' now')
+    }
+    else {
+        var a = 1
+        console.log(2)
+    }
+}
+```
+
+- let 只能声明一次，可赋值不同的数据类型
 - let 声明的变量只在 let 命令所在的代码块内有效
 - let具有暂时性死去特性
 - ES6 明确规定，如果区块中存在`let`和`const`命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。
+
+> 注意：函数作用域：只有函数有，如果在函数内部没有声明，直接赋值的变量为全局变量
+
 - ![image-20200728091329631](images/image-20200728091329631.png)
 
 ```javascript
@@ -160,6 +180,23 @@ let [a, b, c] = [1, 2, 3];
 
 
 
+## flat
+
+扁平化：多维数组全部展开为一位数组
+
+- 数组完全扁平化arr.flat(Infinity)
+- 第二种:arr.toString().split(',').map(item=>parseFloat(item))
+
+```javascript
+let arr = [1,2,3,[4,7,8,9,[10,46]]]
+    while(arr.some(item=>Array.isArray(item))){
+      arr = [].concat(...arr)
+    }
+    console.log(arr)
+```
+
+
+
 ## find
 
 ![image-20210105174630489](images/image-20210105174630489.png)
@@ -241,6 +278,8 @@ let [a, b, c] = [1, 2, 3];
 ![image-20201217152554880](images/image-20201217152554880.png)
 
 ![image-20201217153046736](images/image-20201217153046736.png)
+
+![image-20210409194035622](images/image-20210409194035622.png)
 
 
 

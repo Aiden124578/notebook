@@ -259,6 +259,18 @@ Person.defalutProps = {
 
 ![image-20210203163323360](images/image-20210203163323360.png)
 
+第二种获取元素
+
+![image-20210215201857764](images/image-20210215201857764.png)
+
+使用：
+
+![image-20210215201907932](images/image-20210215201907932.png)
+
+放在constructor里面改变this的指向
+
+![image-20210215202154476](images/image-20210215202154476.png)
+
 
 
 # ref获取Dom元素

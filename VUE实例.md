@@ -2,9 +2,17 @@
 
 ## 选项卡
 
+第一种
+
 - 设置一个currentIndex：0与遍历for的index一样
 - 添加一个点击事件，this.currentIndex = index
 - 传参，传index
+
+第二种
+
+![image-20210215232655811](images/image-20210215232655811.png)
+
+![image-20210215232732806](images/image-20210215232732806.png)
 
 
 

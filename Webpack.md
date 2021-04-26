@@ -10,7 +10,7 @@ webpack是一个现代的JavaScript应用的静态模化块打包工具。
 
 ## Webpack安装
 
-- 安装nod0.jse，node.js自带了软件包管理工具npm
+- 安装node.js，node.js自带了软件包管理工具npm
 - 安装webpack，npm install webpack@3.6.0 -g
 
 
