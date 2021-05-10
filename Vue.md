@@ -20,31 +20,28 @@ created(){
 }
 ```
 
-<<<<<<< HEAD
 - beforeMount表示模板已经在内存中编译完成了，但是尚未把模板渲染到页面中，即数据未能渲染
 - mounted是template挂载到DOM时回调，表示内存中的模板已经真实的挂载到了页面中，用户已经可以看到渲染好的页面了，实例创建期间的最后一个生命周期函数，此时，如果没有其他操作的话，这个实例就躺在我们的内存中，一动不动，操作页面的DOM节点时调用此函数，用来拿后台接口数据
-=======
 - beforMount表示模板已经在内存中编译完成了，但是尚未把模板渲染到页面中，即数据未能渲染
 - mouted是template挂载到DOM时回调，表示内存中的模板已经真实的挂载到了页面中，用户已经可以看到渲染好的页面了，实例创建期间的最后一个生命周期函数，此时，如果没有其他操作的话，这个实例就躺在我们的内存中，一动不动，操作页面的DOM节点时调用此函数
->>>>>>> e0f6b5d57adf8845e18666287d4b04ead84b7b02
+
 - 运行阶段，beforeUpdate，updated当data中数据改变时两个才会触发，执行0次或多次
   - beforeUpdate页面上的数据是旧的，data中的数据是最新的
   - updated是数据发生改变时回调，页面中的数据和data中的数据都是最新的
 
-<<<<<<< HEAD
 - 销毁阶段，需要手动销毁（this.$destroy()）
   - 执行beforeDestroy，实例上的所有data和所有的methods，以及过滤器等都处于可用状态
-=======
 - 销毁阶段
+  
   - 执行beforDestroy，实例上的所有data和所有的methods，以及过滤器等都处于可用状态
->>>>>>> e0f6b5d57adf8845e18666287d4b04ead84b7b02
+
   - 执行destroyed，实例上的所有data和所有的methods，以及过滤器等都已经不可用了
 
 
 
 ## Vue组件化思想
 
-![image-20200811173657426.png](https://i.loli.net/2020/11/20/u761LaJkl8RMXNq.png)
+![image-20200811173657426](images/image-20200811173657426.png)
 
 
 
@@ -57,30 +54,30 @@ created(){
   - 注册组件
   - 使用组件,放到vue的实例中使用
 
-![image-20200811174803873.png](https://i.loli.net/2020/11/19/9YJH3xet4K2gPIT.png)
+![image-20200811174803873](images/image-20200811174803873.png)
 
 - 局部组件，在vue中注册组件，只能id为app的使用
 
-![image-20200812100602428.png](https://i.loli.net/2020/11/19/HMCnGdkZg1PvSUB.png)
+![image-20200812100602428](images/image-20200812100602428.png)
 
 - vue实例为根组件
 
 - 父组件，第二个组件构造器
 - 子组件，第一个组件构造器，在父组件中注册，只能在父组件中使用
 
-![image-20200812101110648.png](https://i.loli.net/2020/11/19/RDj7iOzy9F2QbBw.png)
+![image-20200812101110648](images/image-20200812101110648.png)
 
-![image-20200812101502217.png](https://i.loli.net/2020/11/19/dqKy5hvUMrDlAOt.png)
+![image-20200812101502217](images/image-20200812101502217.png)
 
-![image-20200812101124068.png](https://i.loli.net/2020/11/19/te4i697pnzauWq8.png)
+![image-20200812101124068](images/image-20200812101124068.png)
 
 - 全局组件注册的语法糖
 
-![image-20200812102101114.png](https://i.loli.net/2020/11/19/rM4gcFsfhUoDAYd.png)
+![image-20200812102101114](images/image-20200812102101114.png)
 
 - 局部组件的语法糖
 
-![image-20200812102226248.png](https://i.loli.net/2020/11/19/3pIon9ZhEJKWBLk.png)
+![image-20200812102226248](images/image-20200812102226248.png)
 
 
 
@@ -90,13 +87,13 @@ created(){
 
 - 第一个种：script标签，类型必须是text/x-template，通过id来获取
 
-![image-20200812103222817.png](https://i.loli.net/2020/11/20/akW74d1KQeXF5bm.png)
+![image-20200812103222817](images/image-20200812103222817.png)
 
-![image-20200812102843464.png](https://i.loli.net/2020/11/19/B9bem6wloX73z5n.png)
+![image-20200812102843464](images/image-20200812102843464.png)
 
 第二种：template标签，id来获取
 
-![image-20200812103103491.png](https://i.loli.net/2020/11/19/Et1nB2JwvlRqrGp.png)
+![image-20200812103103491](images/image-20200812103103491.png)
 
 
 
@@ -106,7 +103,7 @@ created(){
 - 使用时必须放在一个div里面使用
 - data必须是函数的原因，每次返回的都是不同的对象，即使相同也不会相互影响,每一个组件实例都有自己的一个对象，用于保存自己的数据，保持自己的状态
 
-![image-20200812104024270.png](https://i.loli.net/2020/11/20/hg9uYL5m7y38x1V.png)
+![image-20200812104024270](images/image-20200812104024270.png)
 
 
 
@@ -116,13 +113,13 @@ created(){
 - v-bind接收数据
 - 注意：模板都不能写驼峰，props的驼峰标，v-bind不支持驼峰标识，v-on也是，全部小写，如果有驼峰的地方用-表示，后面接小写，cInfo->c-info
 
-![image-20200812114118501.png](https://i.loli.net/2020/11/20/crY7VSI8LXu6Gw5.png)
+![image-20200812114118501](images/image-20200812114118501.png)
 
 - 通过数组传递
 
-![image-20200812140525793.png](https://i.loli.net/2020/11/20/rDkw71VMt8hTbBx.png)
+![image-20200812140525793](images/image-20200812140525793.png)
 
-![image-20200812140447449.png](https://i.loli.net/2020/11/20/Pr3SZoJQE6vXx5s.png)
+![image-20200812140447449](images/image-20200812140447449.png)
 
 - 通过对象传递
 
@@ -130,7 +127,7 @@ created(){
   - default默认值
   - required必须传
 
-![image-20200812142254460.png](https://i.loli.net/2020/11/20/CkBvFwVX4fe19SY.png)
+![image-20200812142254460](images/image-20200812142254460.png)
 
 
 
@@ -199,17 +196,17 @@ created(){
 - number1，number2接收父组件num1，num2数据
 - 方法一
 
-![image-20200812170419840.png](https://i.loli.net/2020/11/20/QTSshDtjobercZp.png)
+![image-20200812170419840](images/image-20200812170419840.png)
 
-![image-20200812170437715.png](https://i.loli.net/2020/11/20/JkNX8aEMjVnzqxy.png)
+![image-20200812170437715](images/image-20200812170437715.png)
 
-![image-20200812170513362.png](https://i.loli.net/2020/11/20/9zMOIP36kYiNVnb.png)
+![image-20200812170513362](images/image-20200812170513362.png)
 
 - 方法二：v-model结合watch
 
-![image-20200812172857131.png](https://i.loli.net/2020/11/20/bUEWo8DJxgBjS7M.png)
+![image-20200812172857131](images/image-20200812172857131.png)
 
-![image-20200812172930616.png](https://i.loli.net/2020/11/20/fm2JHOv3yzaD8wB.png)
+![image-20200812172930616](images/image-20200812172930616.png)
 
 
 
@@ -217,7 +214,7 @@ created(){
 
 $children/$ref
 
-![image-20200812173251358.png](https://i.loli.net/2020/11/20/OlTskVe6gb374jo.png)
+![image-20200812173251358](images/image-20200812173251358.png)
 
 - $children来访问子组件的属性和方法
 
@@ -404,12 +401,8 @@ MVVM是前端视图层的分层开发思想，主要把每个页面分成了M、
 
 - View(HTML+CSS)界面，指页面中的元素和样式，一般指HTML+CSS
 - Model(data中的数据)模型，指程序中创建的或从服务端获取的数据，一般用JS中的一个对象来保持。数据内容会显示到界面View中，即data
-<<<<<<< HEAD
-- 
-  VueModel(Vue实例)视图模型，替代之前手写的DOM/JQUERY操作，把模型中的数据和界面中的HTML元素“绑定在一起”，数据双向绑定
-=======
+- VueModel(Vue实例)视图模型，替代之前手写的DOM/JQUERY操作，把模型中的数据和界面中的HTML元素“绑定在一起”，数据双向绑定
 - VueModel(Vue实例)试图模型，替代之前手写的DOM/JQUERY操作，把模型中的数据和界面中的HTML元素“绑定在一起”，数据双向绑定
->>>>>>> e0f6b5d57adf8845e18666287d4b04ead84b7b02
 
 
 
@@ -430,7 +423,10 @@ method类中的方法，function为函数
 
 ## this
 
-this表当前对象，可以获取到data中的数据
+- 在template模板中可以省略this
+
+- this表当前对象，可以获取到data中的数据
+
 
 
 
@@ -1739,3 +1735,219 @@ app.listen(80,()=>{
 - npm install
 - npm run dev
 
+
+
+## setup
+
+setup函数是组合API（Composition API）的入口函数，setup只能是同步的函数
+
+- 要想让变量为动态的则需要导入ref
+- 在组合API中定义的变量/方法，要想在外界使用，必须通过return {xxx,xxx}暴露出去
+
+```javascript
+import {ref} from 'vue'
+setup(){
+  let count = ref(0)
+}
+return {count}
+```
+
+> 注意：ref函数只能监听简单类型的变化，不能监听复杂类型的变化
+
+- reactive函数监听复杂类型的变化（对象/数组）
+
+```javascript
+import {reactive} from 'vue'
+setup(){
+let state = reactive({
+    stus:[]
+  })
+  return {state}
+}
+```
+
+### setup本质
+
+- Composition API注入到Option API中（data，methods）
+
+### setup执行时机
+
+顺序：
+
+- beforeCreate：表示组件刚刚被创建出来，组件的data和methods还没有初始化好
+-  setup：不能够使用data和methods的，只能是同步的，不能是异步的
+- Created：表示组件刚刚被创建出来，并且组件的data和methods已经初始化好
+
+
+
+## reactive
+
+本质：就是将传入的数据包装成一个Proxy对象
+
+- reactive是Vue3中提供的实现响应式数据的方法
+- 在Vue2中响应式数据是通过defineProperty来实现的
+- 在Vue3中响应式数据是通过ES6的Proxy来实现的
+
+注意：
+
+- reactive参数必须是对象（json/arr）
+- 如果reactive传递了其它对象（内置对象）
+  - 默认情况下修改对象，界面不会自动更新
+  - 如果想更新，可以通过重新赋值的方式
+
+![image-20210430175730202](images/image-20210430175730202.png)
+
+
+
+## ref
+
+本质：ref底层其实还是reactive
+
+- ref和reactive一样，也是实现响应式数据的方法
+- 系统会根据我们给ref传入的值将它转换成ref(xxx) -> reactive({value:xxx})
+
+注意：
+
+- 在Vue中使用ref的值不用通过value获取，需要通过变量.value来更改值
+- 在JS中使用ref的值必须通过value获取
+- 如果是通过ref创建的数据，那么在template中使用的时候不用通过.value来获取，因为Vue会自动给我们添加.value
+
+
+
+## ref和reactive的区别
+
+- 如果在template里使用的是ref类型，那么Vue会自动帮我们添加.value
+- 如果在template里使用的是reactive类型，那么Vue不会自动帮我们添加.value
+
+Vue是如何决定是否需要添加.value的
+
+- Vue在解析数据之前，会自动判断这个数据是否是ref类型的
+- 如果是就自动添加.value，如果不是就不自动添加.value
+
+Vue是如何判断当前的数据是否是ref类型的
+
+- 通过当前数据的`__v_ref`来判断的
+- 如果有这个私有的属性，并且取值为true，那么就代表是一个ref类型的数据
+- 可以通过isRef，isReactive来判断，import {isRef,isReactive} from 'vue'
+
+
+
+## 递归监听
+
+默认情况下，无论是通过ref还是reactive都是递归监听
+
+> 注意：如果数据量较大，非常消耗性能
+
+
+
+## 非递归监听
+
+通过shallowRef和sallowReactive只能监听第一层数据
+
+- 只监听第一层（对象）数据，只有第一层更改为了Proxy对象
+- 只要第一层的数据改变，后面的也会改变
+- 如果是通过shallowRef创建的数据，那么Vue监听的是.value的变化，并不是第一层的变化
+- triggerRef能够主动更新数据，Vue3没有triggerReactive
+
+> 注意：只有在需要监听的数据量比较大的时候，我们才使用shallowRef/shallowReactive
+
+
+
+## toRaw
+
+- 从Reactive或Ref中得到原始数据
+- 做一些不想被监听的事情（提高性能）
+  - 获取reactive的原始数据let obj2 = toRaw(state)
+  - 获取ref的原始数据let obj2 = toRaw(state.value)
+
+![image-20210501001732601](images/image-20210501001732601.png)
+
+
+
+## markRaw
+
+不想有响应式数据，不想被追踪
+
+![image-20210506155211584](images/image-20210506155211584.png)
+
+
+
+## toRef
+
+- 如果利用ref将某一个对象中的属性变成响应式的数据，我们修改响应式的数据是不会影响到原始数据的
+- 如果利用toRef将某个对象中的属性变成响应式的数据，我们修改响应式的数据是会影响到原始数据的，但是如果响应式的数据是通过toRef创建的，那么修改了数据并不会触发UI界面的更新
+
+> 使用：如果想让响应式数据和以前的数据关联起来，并且更新响应式数据之后还不想更新UI，那么就可以用toRef
+
+![image-20210506233446764](images/image-20210506233446764.png)
+
+
+
+## toRefs
+
+多个变量变成响应式数据
+
+![image-20210506234020044](images/image-20210506234020044.png)
+
+
+
+## customRef
+
+- 返回一个ref对象，可以显示地控制依赖追踪和触发响应
+- 自定义Ref
+
+![image-20210507101322937](images/image-20210507101322937.png)
+
+
+
+## 通过Ref获取界面是上的元素
+
+- 因为setup是在beforeCreate和Created之间执行的，所以获取不到元素，要用到生命周期函数onMounted获取
+
+![image-20210507102950613](images/image-20210507102950613.png)
+
+![image-20210507103130314](images/image-20210507103130314.png)
+
+
+
+## readonly
+
+- readonly用于创建只读的数据，并且是递归只读（每一层都是只读的）
+
+- shallowReadonly用于创建第一层只读的数据
+- isReadonly用于判断是否为readonly
+
+
+
+## const和readonly的区别
+
+- const：赋值保护，不能给变量重新赋值
+- readonly：属性保护，不能给属性重新赋值
+
+```javascript
+const value = {name:'zs',age:123}
+value.name = 'ls'
+value.age = 666 //value的属性值都会改变
+```
+
+
+
+## 手写Proxy
+
+传递对象
+
+![image-20210507104605585](images/image-20210507104605585.png)
+
+传递数组
+
+let arr = [1,3,5]
+
+> 注意：修改完数组后必须要return true，因为数组长度会改变，否则会报错
+
+![image-20210507105240073](images/image-20210507105240073.png)
+
+
+
+## 手写shallowReactive
+
+![image-20210507105812679](images/image-20210507105812679.png)
