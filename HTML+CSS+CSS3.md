@@ -22,7 +22,7 @@ iview layui
 
 ## Web标准 ：遵守W3C标准 
 
-1. 浏览器内核 safri：webkit ，chrome：bling
+1. 浏览器内核 safri：webkit ，chrome：blink
 2. 使各浏览器相同样子显示
 
 
