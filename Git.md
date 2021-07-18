@@ -57,8 +57,12 @@
 - 创建dev分支，dev的分支和master分支里的东西是一样的`git branch dev`
 - 查看分支`git branch`
 - 切换分支`git checkout dev`
+- 创建并切换分支`git checkout -b dev`
+- 将本地分支推送到远程仓库`git push -u origin dev`
 - 切换分支并进入子分支`git checkout -u dev`
-- 在主分支合并分支，把当前分支与指定的分支进行合并`git merge dev`
+- 在主分支合并分支，把当前分支与指定的分支进行合并
+  - `git checkout master`
+  - `git merge dev`
 
 
 

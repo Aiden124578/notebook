@@ -68,3 +68,14 @@ io.on('connection',function(socket){
 </script>
 ```
 
+
+
+# webSocket
+
+## 客户端
+
+![image-20210717100530241](E:\笔记\images\image-20210717100530241.png)
+
+![image-20210717100655367](E:\笔记\images\image-20210717100655367.png)
+
+## 服务端

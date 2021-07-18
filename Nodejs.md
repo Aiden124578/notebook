@@ -535,6 +535,14 @@ app.use(router)
 
 
 
+## express案例
+
+![image-20210717104022215](E:\笔记\images\image-20210717104022215.png)
+
+
+
+
+
 # MongoDB
 
 ### 关系型数据库和非关系型数据库
