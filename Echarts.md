@@ -1218,11 +1218,11 @@ window.onresize = function(){
 
 不断发请求，服务器压力大
 
-![image-20210716234254212](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210716234254212.png)
+![image-20210716234254212](E:\笔记\images\image-20210716234254212.png)
 
 ## webSocket
 
 只会请求一次，减轻服务器压力
 
-![image-20210716234942575](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210716234942575.png)
+![image-20210716234942575](E:\笔记\images\image-20210716234942575.png)
 
