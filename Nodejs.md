@@ -537,7 +537,7 @@ app.use(router)
 
 ## express案例
 
-![image-20210717104022215](E:\笔记\images\image-20210717104022215.png)
+![image-20210717104022215](images/image-20210717104022215.png)
 
 
 

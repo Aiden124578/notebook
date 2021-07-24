@@ -78,3 +78,20 @@ this.$router.push('/home')
 ## switch开关
 
 change事件拿状态值，状态改变时触发
+
+
+
+## 树形表格组件
+
+- 安装运行依赖`vue-table-with-tree-grid`
+- 自定义template要用slot去设置作用域插槽
+- 用`slot-scope="scope"`去拿对应的数据
+
+
+
+## 级联选择器
+
+- 一定要设置`:props`
+- v-model是应该数组
+
+![image-20210718191659362](images/image-20210718191659362.png)

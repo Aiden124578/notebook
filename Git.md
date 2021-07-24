@@ -60,9 +60,13 @@
 - 创建并切换分支`git checkout -b dev`
 - 将本地分支推送到远程仓库`git push -u origin dev`
 - 切换分支并进入子分支`git checkout -u dev`
+- 查看用户名`git config user.name`
+- 查看邮箱`git config user.email`
+- 查看远程链接`git config -l`
 - 在主分支合并分支，把当前分支与指定的分支进行合并
   - `git checkout master`
   - `git merge dev`
+  - git push
 
 
 
@@ -82,8 +86,8 @@
 # ssh上传代码
 
 - 不用输入用户名和密码了
-
 - 生成公钥和私钥`ssh-keygen -t rsa -C "xiaoxin@qq.com"`
+- 查看公钥`cat ~/.ssh/id_rsa.pub`
 - GitHub设置公钥
 - 通过命令上传到GitHub`git push ssh地址 master`
 
@@ -102,5 +106,7 @@
 - `git remote add origin 服务器地址`
 - `git push origin -u master`使用这方法加了-u参数，下次提交直接用`git push`，拿到本地`git pull`
 - 加上了-u，git会把当前分支与远程分支进行关联
+- **git pull --rebase origin master**
 
 > 注意：此方法只在当前目录下有效
+
